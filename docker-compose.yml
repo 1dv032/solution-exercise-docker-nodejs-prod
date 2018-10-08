@@ -7,8 +7,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    links:
-      - web:web
+    depends_on:
+      - web
     volumes:
       - /var/log/nginx
   web:
